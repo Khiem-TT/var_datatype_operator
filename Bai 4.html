@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chu vi hình tròn</title>
+</head>
+<body>
+<p>Nhập độ dài bán kính: <input type="text" id="r"></p>
+<button onclick="cal()">Calculate</button>
+<p id="p"></p>
+<script>
+  function cal() {
+    let r = parseInt(document.getElementById('r').value);
+    const pi = 3.14;
+    let p = pi * (r * 2);
+    document.getElementById('p').innerHTML = "Chu vi hình tròn: " + p;
+  }
+</script>
+</body>
+</html>

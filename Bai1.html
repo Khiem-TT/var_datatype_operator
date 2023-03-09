@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập điểm</title>
+</head>
+<body>
+    <p>Nhập điểm Vật lý: <input type="text" name="points" id="physics"></p>
+    <p>Nhập điểm Hoá học: <input type="text" name="points" id="chemistry"></p>
+    <p>Nhập điểm Sinh học: <input type="text" name="points" id="biology"></p>
+    <button onclick="result()">Check</button>
+    <p id="avarage"></p>
+    <p id="total"></p>
+    <script>
+        function result() {
+            let physics = parseInt(document.getElementById('physics').value);
+            let chemistry = parseInt(document.getElementById('chemistry').value);
+            let biology = parseInt(document.getElementById('biology').value);
+            let dtb = (physics + chemistry + biology) / 3;
+            let total = dtb * 3;
+            document.getElementById('avarage').innerHTML = "Điểm trung bình: " + dtb;
+            document.getElementById('total').innerHTML = "Tổng điểm: " + total;
+        }
+    </script>
+</body>
+</html>
